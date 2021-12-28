@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "d3bc29de-ad43-4d68-a5d9-6050bb8fc021",
+		"name": "GLOBAL VARIABLES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Smoke TC",
+			"item": [
+				{
+					"name": "HTML-API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// java-scripts //chai library //english lang\r",
+									"// order of execution in postman : API Request --> API Response --> Tests\r",
+									"\r",
+									"pm.test(\"Verify if 200 is the response code\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if the response body is not a JSON body\", function () {\r",
+									"     pm.response.to.not.have.jsonBody()\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Verify if OK is the response message\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present\", function () {\r",
+									"    pm.response.to.have.body\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if mandatory strings are present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"html\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Herman Melville - Moby-Dick\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"text/html; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Server response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Server\", \"gunicorn/19.9.0\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "{{gUserAgent}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{gProtocol}}://{{gBaseURL}}/html",
+							"protocol": "{{gProtocol}}",
+							"host": [
+								"{{gBaseURL}}"
+							],
+							"path": [
+								"html"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XML-API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 200 is the response code\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if OK is the response message\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present\", function () {\r",
+									"    pm.response.to.have.body\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if mandatory strings are present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"xml\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Sample Slide Show\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Wake up to WonderWidgets!\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/xml\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Server response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Server\", \"gunicorn/19.9.0\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gProtocol}}://{{gBaseURL}}/xml",
+							"protocol": "{{gProtocol}}",
+							"host": [
+								"{{gBaseURL}}"
+							],
+							"path": [
+								"xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON-API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 200 is the response code\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if OK is the response message\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present\", function () {\r",
+									"    pm.response.to.have.body\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if mandatory strings are present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"slideshow\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Wake up to WonderWidgets!\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Server response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Server\", \"gunicorn/19.9.0\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gProtocol}}://{{gBaseURL}}/json",
+							"protocol": "{{gProtocol}}",
+							"host": [
+								"{{gBaseURL}}"
+							],
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TEXT-API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 200 is the response code\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if OK is the response message\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present\", function () {\r",
+									"    pm.response.to.have.body\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if mandatory strings are present\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User-agent\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Disallow\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\", \"text/plain\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Server response header is present\", function () {\r",
+									"    pm.response.to.have.header(\"Server\", \"gunicorn/19.9.0\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gProtocol}}://{{gBaseURL}}/robots.txt",
+							"protocol": "{{gProtocol}}",
+							"host": [
+								"{{gBaseURL}}"
+							],
+							"path": [
+								"robots.txt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POSITIVE TC Copy",
+			"item": [
+				{
+					"name": "BASIC AUTH",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the response body content\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});\r",
+									"\r",
+									"console.error(\"This is an error\");\r",
+									"console.info(\"This is an info\");\r",
+									"console.log(\"This is a log\");\r",
+									"console.warn(\"This is a warning\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{gPWD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{gUN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/basic-auth/user/passwd",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"passwd"
+							]
+						},
+						"description": "This is a RESTful API that uses Basic Authorization to get server response"
+					},
+					"response": []
+				},
+				{
+					"name": "BEARER TOKEN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if token is present in response body\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{gToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/bearer",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"bearer"
+							]
+						},
+						"description": "This is a RESTful API that uses **Bearer Token Authorization** to get server response"
+					},
+					"response": []
+				},
+				{
+					"name": "DIGEST AUTH",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the response body content\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Cookies are present\", () => {\r",
+									"    pm.expect(pm.cookies.has('stale_after')).to.be.true;\r",
+									"    pm.expect(pm.cookies.has('fake')).to.be.true;\r",
+									"    pm.expect(pm.cookies.has('kiran')).to.be.false;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify the Cookie values\") \r",
+									"{\r",
+									"    pm.expect(pm.cookies.get('fake')).to.eql(\"fake_value\");\r",
+									"    pm.expect(pm.cookies.get('stale_after')).to.eql(\"never\");\r",
+									"};\r",
+									"\r",
+									"pm.test.skip(\"Response body contains true string\") \r",
+									"{\r",
+									"   pm.expect(pm.response.text()).to.include(\"true\"); \r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"gQOP\", \"auth\");\r",
+									"\r",
+									"\r",
+									"console.log(\"The value of global variable gQOP is    \")\r",
+									"console.log(pm.globals.get(\"gQOP\"));\r",
+									"\r",
+									"pm.globals.unset(\"gUN\")\r",
+									"pm.globals.unset(\"gPWD\");\r",
+									"\r",
+									"console.log(\"After deleting the variables, the values are ...\")\r",
+									"\r",
+									"console.log(pm.globals.get(\"gUN\"));\r",
+									"console.log(pm.globals.get(\"gPWD\"));\r",
+									"\r",
+									"pm.globals.set(\"gUN\", \"user\");\r",
+									"pm.globals.set(\"gPWD\", \"passwd\");\r",
+									"\r",
+									"console.log(\"After creating the variables, the values are ...\");\r",
+									"\r",
+									"console.log(pm.globals.get(\"gUN\"));\r",
+									"console.log(pm.globals.get(\"gPWD\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "qop",
+									"value": "{{gQOP}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "passwd",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/digest-auth/auth/user/passwd",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"digest-auth",
+								"auth",
+								"user",
+								"passwd"
+							]
+						},
+						"description": "This is a RESTful API that uses Digest Authorization to get server response"
+					},
+					"response": []
+				},
+				{
+					"name": "DIGEST AUTH-ALGORITHM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the response body content\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "qop",
+									"value": "auth-int",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "passwd",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/digest-auth/auth-int/user/passwd/MD5",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"digest-auth",
+								"auth-int",
+								"user",
+								"passwd",
+								"MD5"
+							]
+						},
+						"description": "This is a RESTful API that uses Digest Authorization to get server response"
+					},
+					"response": []
+				}
+			],
+			"description": "This folder consists of all positive test scenarios to test the secured **REST APIs.**",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Verify is 200 is the response code\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Verify if response is received\", function () {",
+							"    pm.response.to.have.body",
+							"});",
+							"",
+							"pm.test(\"Verify if response body is correct\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"authenticated\");",
+							"    pm.expect(pm.response.text()).to.include(\"true\");",
+							"});",
+							"",
+							"pm.test(\"Verify if the response doesn't contains 4xx & 5xx errors\", function () {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Verify if the response contains 2xx success code\", function () {",
+							"    pm.response.to.be.success;",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Negative TC",
+			"item": [
+				{
+					"name": "HTML-Method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 405 is the response code\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/html",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"html"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XML-Method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 405 is the response code\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/xml",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON-Method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 405 is the response code\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/json",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TEXT-Method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if 405 is the response code\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/robots.txt",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"robots.txt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Verify if the response doesn't contains 4xx & 5xx errors\", function () {",
+					"    pm.response.to.not.be.error;",
+					"});",
+					"",
+					"pm.test(\"Verify if the response contains 2xx success code\", function () {",
+					"    pm.response.to.be.success;",
+					"});"
+				]
+			}
+		}
+	]
+}

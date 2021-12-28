@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "859953e7-7ca5-40b7-bd1e-6ab934593fdd",
+		"name": "TempConvert",
+		"description": "\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TempConvertSoap",
+			"item": [
+				{
+					"name": "FahrenheitToCelsius",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "https://www.w3schools.com/xml/FahrenheitToCelsius"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\n      <Fahrenheit>string</Fahrenheit>\n    </FahrenheitToCelsius>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TempConvertSoapBaseUrl}}/xml/tempconvert.asmx",
+							"host": [
+								"{{TempConvertSoapBaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "FahrenheitToCelsius response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "https://www.w3schools.com/xml/FahrenheitToCelsius"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\n      <Fahrenheit>string</Fahrenheit>\n    </FahrenheitToCelsius>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FahrenheitToCelsiusResponse xmlns=\"https://www.w3schools.com/xml/\">\n      <FahrenheitToCelsiusResult>string</FahrenheitToCelsiusResult>\n    </FahrenheitToCelsiusResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "CelsiusToFahrenheit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "https://www.w3schools.com/xml/CelsiusToFahrenheit"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\n      <Celsius>string</Celsius>\n    </CelsiusToFahrenheit>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TempConvertSoapBaseUrl}}/xml/tempconvert.asmx",
+							"host": [
+								"{{TempConvertSoapBaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CelsiusToFahrenheit response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "https://www.w3schools.com/xml/CelsiusToFahrenheit"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\n      <Celsius>string</Celsius>\n    </CelsiusToFahrenheit>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CelsiusToFahrenheitResponse xmlns=\"https://www.w3schools.com/xml/\">\n      <CelsiusToFahrenheitResult>string</CelsiusToFahrenheitResult>\n    </CelsiusToFahrenheitResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TempConvertSoap12",
+			"item": [
+				{
+					"name": "FahrenheitToCelsius",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "https://www.w3schools.com/xml/FahrenheitToCelsius"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\n      <Fahrenheit>string</Fahrenheit>\n    </FahrenheitToCelsius>\n  </soap12:Body>\n</soap12:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TempConvertSoap12BaseUrl}}/xml/tempconvert.asmx",
+							"host": [
+								"{{TempConvertSoap12BaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "FahrenheitToCelsius response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "https://www.w3schools.com/xml/FahrenheitToCelsius"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\n      <Fahrenheit>string</Fahrenheit>\n    </FahrenheitToCelsius>\n  </soap12:Body>\n</soap12:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <FahrenheitToCelsiusResponse xmlns=\"https://www.w3schools.com/xml/\">\n      <FahrenheitToCelsiusResult>string</FahrenheitToCelsiusResult>\n    </FahrenheitToCelsiusResponse>\n  </soap12:Body>\n</soap12:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "CelsiusToFahrenheit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							},
+							{
+								"key": "SOAPAction",
+								"value": "https://www.w3schools.com/xml/CelsiusToFahrenheit"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\n      <Celsius>string</Celsius>\n    </CelsiusToFahrenheit>\n  </soap12:Body>\n</soap12:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TempConvertSoap12BaseUrl}}/xml/tempconvert.asmx",
+							"host": [
+								"{{TempConvertSoap12BaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CelsiusToFahrenheit response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									},
+									{
+										"key": "SOAPAction",
+										"value": "https://www.w3schools.com/xml/CelsiusToFahrenheit"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\n      <Celsius>string</Celsius>\n    </CelsiusToFahrenheit>\n  </soap12:Body>\n</soap12:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <CelsiusToFahrenheitResponse xmlns=\"https://www.w3schools.com/xml/\">\n      <CelsiusToFahrenheitResult>string</CelsiusToFahrenheitResult>\n    </CelsiusToFahrenheitResponse>\n  </soap12:Body>\n</soap12:Envelope>\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TempConvertHttpPost",
+			"item": [
+				{
+					"name": "FahrenheitToCelsius",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Fahrenheit",
+									"value": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{TempConvertHttpPostBaseUrl}}/xml/tempconvert.asmx/FahrenheitToCelsius",
+							"host": [
+								"{{TempConvertHttpPostBaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx",
+								"FahrenheitToCelsius"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "FahrenheitToCelsius response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Fahrenheit",
+											"value": "string"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx/FahrenheitToCelsius",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx",
+										"FahrenheitToCelsius"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<string xmlns=\"https://www.w3schools.com/xml/\">string</string>\n"
+						}
+					]
+				},
+				{
+					"name": "CelsiusToFahrenheit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Celsius",
+									"value": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{TempConvertHttpPostBaseUrl}}/xml/tempconvert.asmx/CelsiusToFahrenheit",
+							"host": [
+								"{{TempConvertHttpPostBaseUrl}}"
+							],
+							"path": [
+								"xml",
+								"tempconvert.asmx",
+								"CelsiusToFahrenheit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CelsiusToFahrenheit response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Celsius",
+											"value": "string"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit",
+									"protocol": "http",
+									"host": [
+										"www",
+										"w3schools",
+										"com"
+									],
+									"path": [
+										"xml",
+										"tempconvert.asmx",
+										"CelsiusToFahrenheit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<string xmlns=\"https://www.w3schools.com/xml/\">string</string>\n"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "TempConvertSoapBaseUrl",
+			"value": "http://www.w3schools.com",
+			"type": "any"
+		},
+		{
+			"key": "TempConvertSoap12BaseUrl",
+			"value": "http://www.w3schools.com",
+			"type": "any"
+		},
+		{
+			"key": "TempConvertHttpPostBaseUrl",
+			"value": "http://www.w3schools.com",
+			"type": "any"
+		}
+	]
+}

@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "8e6722f1-80fc-464c-82ad-35acf0b1d454",
+		"name": "kiran-academy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/all-courses",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "{{gUserAgent}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}//all-courses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"all-courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/all-courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/all-courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all-courses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Dec 2021 01:58:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=422ac6535d831ae2"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99581b8cd991c7b9"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1640051969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74-lSBsMJSeWpWtEYwDMbl5pK2FZ3E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\"API Testing - Postman\",\n\"API Testing - SOAP UI\",\n\"API Testing - Katalon Studio\",\n\"API Testing - Insomnia\",\n\"API Testing - Talend\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/addCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}//addCourse",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"addCourse"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/addCourse",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"courseName\" : \"Performance Testing - JMeter\",\r\n\"trainerName\" : \"Kiran\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addCourse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addCourse"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Dec 2021 01:58:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=3777d61422d76275"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=f54dc2568e54fac1"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1640051969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-VPsFjj8wh3ixAYBKlyCIOfeX8/w\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\"Successfully added the new course!\"\n\"courseId\": \"123\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/updateCourse/123",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}//updateCourse/123",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"updateCourse",
+						"123"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/updateCourse/123",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"courseName\" : \"Performance Testing - JMeter\",\r\n\"trainerName\" : \"Kiran\",\r\n\"trainingDuration\" : \"30 hours\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/updateCourse/123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updateCourse",
+								"123"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Dec 2021 01:59:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=ec088b67ac26e378"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=bcbd0e36ea25ce64"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "117"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1640051969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-F0dZ8cHHdRgpNXaa0NozFZ2JfS8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n\"Succesfully updated the course 123 !\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "/deleteCourse/123",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}//deleteCourse/123",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"deleteCourse",
+						"123"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/deleteCourse/123",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/deleteCourse/123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deleteCourse",
+								"123"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Dec 2021 01:59:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=a2833d684340cabf"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=9a349f38566c7ef4"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "116"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1640051969"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-lExu8fapsxhtFkp+ZhEYW5+z5BY\""
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"Successfully deleted the course 123 !\"\r\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 2XX\", function () {",
+					"    pm.response.to.be.success;",
+					"});"
+				]
+			}
+		}
+	]
+}

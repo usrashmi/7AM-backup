@@ -1,0 +1,2836 @@
+{
+	"info": {
+		"_postman_id": "a6aab471-1517-4f8d-80ae-3f4288aeb137",
+		"name": "FOOTBALL-SOAP API",
+		"description": "DataFlex Web Service for public information from the DataFlex Football Pool\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "InfoSoap",
+			"item": [
+				{
+					"name": "AllCardsInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllCardsInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the information about the given yellow and red cards in all games. What date, minute, teams that were playing and player name"
+					},
+					"response": [
+						{
+							"name": "AllCardsInfo response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllCardsInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllCardsInfoResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllCardsInfoResult>\n        <tAllCardsInfo>\n          <dDate>2021-12-20Z</dDate>\n          <iMinute>100</iMinute>\n          <sTeam1Name>string</sTeam1Name>\n          <sTeam1Flag>string</sTeam1Flag>\n          <sTeam2Name>string</sTeam2Name>\n          <sTeam2Flag>string</sTeam2Flag>\n          <sPlayerName>string</sPlayerName>\n          <iYellow>100</iYellow>\n          <iRed>100</iRed>\n        </tAllCardsInfo>\n      </AllCardsInfoResult>\n    </AllCardsInfoResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "AllPlayerNames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayerNames xmlns=\"https://footballpool.dataaccess.eu\">\n      <bSelected>true</bSelected>\n    </AllPlayerNames>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the id, name, country and flag reference of all players. Pass a 0 for all players and 1 for only the selected players."
+					},
+					"response": [
+						{
+							"name": "AllPlayerNames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayerNames xmlns=\"https://footballpool.dataaccess.eu\">\n      <bSelected>true</bSelected>\n    </AllPlayerNames>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayerNamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllPlayerNamesResult>\n        <tPlayerName>\n          <iId>100</iId>\n          <sName>string</sName>\n          <sCountryName>string</sCountryName>\n          <sCountryFlag>string</sCountryFlag>\n        </tPlayerName>\n      </AllPlayerNamesResult>\n    </AllPlayerNamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "AllPlayersWithCards",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithCards xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the names of all players that have a yellow or a red card. The number of yellow and red cards is returned."
+					},
+					"response": [
+						{
+							"name": "AllPlayersWithCards response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithCards xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithCardsResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllPlayersWithCardsResult>\n        <tTeamPlayerCardInfo>\n          <iID>100</iID>\n          <sName>string</sName>\n          <iYellowCards>100</iYellowCards>\n          <iRedCards>100</iRedCards>\n        </tTeamPlayerCardInfo>\n      </AllPlayersWithCardsResult>\n    </AllPlayersWithCardsResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "AllPlayersWithRole",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithRole xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n      <sRoleCode>string</sRoleCode>\n    </AllPlayersWithRole>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the names of all players that have the passed player role. If you pass a team name the result will be filtered on that team. For possible team names call the function TeamNames. For possible role codes call the function PlayerRoles"
+					},
+					"response": [
+						{
+							"name": "AllPlayersWithRole response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithRole xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n      <sRoleCode>string</sRoleCode>\n    </AllPlayersWithRole>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllPlayersWithRoleResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllPlayersWithRoleResult>\n        <tTeamPlayerName>\n          <iID>100</iID>\n          <sName>string</sName>\n          <sTeamName>string</sTeamName>\n        </tTeamPlayerName>\n      </AllPlayersWithRoleResult>\n    </AllPlayersWithRoleResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "AllStadiumInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllStadiumInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the information stored about all stadiums. The array contains the names, the city where the stadium can be found, the seat capacity, the google maps and wikipedia URLs"
+					},
+					"response": [
+						{
+							"name": "AllStadiumInfo response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllStadiumInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllStadiumInfoResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllStadiumInfoResult>\n        <tStadiumInfo>\n          <sName>string</sName>\n          <iSeatsCapacity>100</iSeatsCapacity>\n          <sCityName>string</sCityName>\n          <sWikipediaURL>string</sWikipediaURL>\n          <sGoogleMapsURL>string</sGoogleMapsURL>\n        </tStadiumInfo>\n      </AllStadiumInfoResult>\n    </AllStadiumInfoResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "AllTeamCoachNames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllTeamCoachNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the names of all the coaches and the team name he/she is coaching"
+					},
+					"response": [
+						{
+							"name": "AllTeamCoachNames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllTeamCoachNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <AllTeamCoachNamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <AllTeamCoachNamesResult>\n        <tTeamCoachName>\n          <sTeamName>string</sTeamName>\n          <sCoachName>string</sCoachName>\n        </tTeamCoachName>\n      </AllTeamCoachNamesResult>\n    </AllTeamCoachNamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "Cards",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Cards xmlns=\"https://footballpool.dataaccess.eu\">\n      <bYellow>true</bYellow>\n      <iGameNumber>100</iGameNumber>\n    </Cards>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the total number of red or yellow cards given for all games (iGameNumber &lt; 1) or a specific game. For the game numbers call the function ResultsAllGames"
+					},
+					"response": [
+						{
+							"name": "Cards response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Cards xmlns=\"https://footballpool.dataaccess.eu\">\n      <bYellow>true</bYellow>\n      <iGameNumber>100</iGameNumber>\n    </Cards>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CardsResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <CardsResult>100</CardsResult>\n    </CardsResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "CityNames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CityNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with all the city names where games are played"
+					},
+					"response": [
+						{
+							"name": "CityNames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CityNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CityNamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <CityNamesResult/>\n    </CityNamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "Countries",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Countries xmlns=\"https://footballpool.dataaccess.eu\">\n      <sCountryName>string</sCountryName>\n    </Countries>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Get the top 25 countries starting with or containing the value of sName"
+					},
+					"response": [
+						{
+							"name": "Countries response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Countries xmlns=\"https://footballpool.dataaccess.eu\">\n      <sCountryName>string</sCountryName>\n    </Countries>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CountriesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <CountriesResult>\n        <tCountry>\n          <iId>100</iId>\n          <sName>string</sName>\n          <sISOCode>string</sISOCode>\n        </tCountry>\n      </CountriesResult>\n    </CountriesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "FirstLastGamesEachLevel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FirstLastGamesEachLevel xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with a play levels and per level the start and end game date and ID"
+					},
+					"response": [
+						{
+							"name": "FirstLastGamesEachLevel response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FirstLastGamesEachLevel xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <FirstLastGamesEachLevelResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <FirstLastGamesEachLevelResult>\n        <tGameLevelInfo>\n          <iLevel>100</iLevel>\n          <sLevelCode>string</sLevelCode>\n          <dFirstGame>2021-12-20Z</dFirstGame>\n          <dtFirstGameTime>2021-12-20T01:45:37.501Z</dtFirstGameTime>\n          <iFirstGameID>100</iFirstGameID>\n          <dLastGame>2021-12-20Z</dLastGame>\n          <iLastGameID>100</iLastGameID>\n        </tGameLevelInfo>\n      </FirstLastGamesEachLevelResult>\n    </FirstLastGamesEachLevelResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GameIDsGroupedByCity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameIDsGroupedByCity xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array of Game IDs grouped by City Name"
+					},
+					"response": [
+						{
+							"name": "GameIDsGroupedByCity response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameIDsGroupedByCity xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameIDsGroupedByCityResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GameIDsGroupedByCityResult>\n        <tGameIDsPerCity>\n          <sCity>string</sCity>\n          <iGameIDs/>\n        </tGameIDsPerCity>\n      </GameIDsGroupedByCityResult>\n    </GameIDsGroupedByCityResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GameScore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameScore xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGameNumber>100</iGameNumber>\n    </GameScore>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the results of a given game (pass the game ID). For the game numbers call the function ResultsAllGames"
+					},
+					"response": [
+						{
+							"name": "GameScore response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameScore xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGameNumber>100</iGameNumber>\n    </GameScore>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameScoreResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GameScoreResult>\n        <iGameNumber>100</iGameNumber>\n        <sDescription>string</sDescription>\n        <dtLocalPlayDateTime>string</dtLocalPlayDateTime>\n        <dtUTCPlayDateTime>string</dtUTCPlayDateTime>\n        <sTeamName1>string</sTeamName1>\n        <sTeamName2>string</sTeamName2>\n        <iScoreTeam1>100</iScoreTeam1>\n        <iScoreTeam2>100</iScoreTeam2>\n        <iRedCards>100</iRedCards>\n        <iYellowCards>100</iYellowCards>\n        <sGroupCode>string</sGroupCode>\n        <bFinished>true</bFinished>\n        <iPenaltiesWonTeam1>100</iPenaltiesWonTeam1>\n        <iPenaltiesWonTeam2>100</iPenaltiesWonTeam2>\n      </GameScoreResult>\n    </GameScoreResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GameTeamScore",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameTeamScore xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGameNumber>100</iGameNumber>\n      <iTeamId>100</iTeamId>\n    </GameTeamScore>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the score for a team in a game. For the game numbers call the function ResultsAllGames. For the team ID call the function Teams"
+					},
+					"response": [
+						{
+							"name": "GameTeamScore response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameTeamScore xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGameNumber>100</iGameNumber>\n      <iTeamId>100</iTeamId>\n    </GameTeamScore>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GameTeamScoreResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GameTeamScoreResult>100</GameTeamScoreResult>\n    </GameTeamScoreResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GoalsScored",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GoalsScored xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the total number of goals scored"
+					},
+					"response": [
+						{
+							"name": "GoalsScored response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GoalsScored xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GoalsScoredResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GoalsScoredResult>100</GoalsScoredResult>\n    </GoalsScoredResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GroupFirstGameDate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupFirstGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </GroupFirstGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the date of the first game in this group"
+					},
+					"response": [
+						{
+							"name": "GroupFirstGameDate response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupFirstGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </GroupFirstGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupFirstGameDateResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GroupFirstGameDateResult>2021-12-20Z</GroupFirstGameDateResult>\n    </GroupFirstGameDateResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GroupInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns a list of groups (poule phase and later round of 16 etc) and the information such as name and date first and last game"
+					},
+					"response": [
+						{
+							"name": "GroupInfo response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupInfo xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupInfoResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GroupInfoResult>\n        <tGroupInfo>\n          <iId>100</iId>\n          <iLevel>100</iLevel>\n          <sCode>string</sCode>\n          <sDescription>string</sDescription>\n          <dFirstGameDate>2021-12-20Z</dFirstGameDate>\n          <dLastGameDate>2021-12-20Z</dLastGameDate>\n        </tGroupInfo>\n      </GroupInfoResult>\n    </GroupInfoResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GroupLastGameDate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupLastGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </GroupLastGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the date of the last game in this group. For the group code call the function GroupInfo"
+					},
+					"response": [
+						{
+							"name": "GroupLastGameDate response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupLastGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </GroupLastGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupLastGameDateResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GroupLastGameDateResult>2021-12-20Z</GroupLastGameDateResult>\n    </GroupLastGameDateResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "GroupStandings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupStandings xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGroupId>100</iGroupId>\n    </GroupStandings>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an the standings in each group by passing the group ID. For the group ID call the function GroupInfo"
+					},
+					"response": [
+						{
+							"name": "GroupStandings response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupStandings xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGroupId>100</iGroupId>\n    </GroupStandings>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GroupStandingsResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <GroupStandingsResult>\n        <tGroupStanding>\n          <iTeamId>100</iTeamId>\n          <sTeamName>string</sTeamName>\n          <iPlayed>100</iPlayed>\n          <iWon>100</iWon>\n          <iDraw>100</iDraw>\n          <iLost>100</iLost>\n          <iGoalsFor>100</iGoalsFor>\n          <iGoalsAgainst>100</iGoalsAgainst>\n          <iPlusMin>100</iPlusMin>\n          <iPoints>100</iPoints>\n        </tGroupStanding>\n      </GroupStandingsResult>\n    </GroupStandingsResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "LevelFirstGameDate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelFirstGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <iLevel>100</iLevel>\n    </LevelFirstGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the date of the first game in this level. For a level Number call the Levels Function."
+					},
+					"response": [
+						{
+							"name": "LevelFirstGameDate response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelFirstGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <iLevel>100</iLevel>\n    </LevelFirstGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelFirstGameDateResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <LevelFirstGameDateResult>2021-12-20Z</LevelFirstGameDateResult>\n    </LevelFirstGameDateResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "LevelLastGameDate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelLastGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <iLevel>100</iLevel>\n    </LevelLastGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the date of the last game in this level For a level number call the Levels function. For a level Number call the Levels Function."
+					},
+					"response": [
+						{
+							"name": "LevelLastGameDate response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelLastGameDate xmlns=\"https://footballpool.dataaccess.eu\">\n      <iLevel>100</iLevel>\n    </LevelLastGameDate>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelLastGameDateResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <LevelLastGameDateResult>2021-12-20Z</LevelLastGameDateResult>\n    </LevelLastGameDateResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "Levels",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Levels xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns a array with level numbers. The numbers can be used in functions that require or offer an option to pass a level number such as LevelFirstGameDate"
+					},
+					"response": [
+						{
+							"name": "Levels response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Levels xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <LevelsResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <LevelsResult/>\n    </LevelsResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "MatchDates",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <MatchDates xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns a list with tournament dates"
+					},
+					"response": [
+						{
+							"name": "MatchDates response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <MatchDates xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <MatchDatesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <MatchDatesResult/>\n    </MatchDatesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "NextGames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NextGames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the next games of date that is greater than or equal to today. Only games of one day are returned."
+					},
+					"response": [
+						{
+							"name": "NextGames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NextGames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NextGamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <NextGamesResult>\n        <tNextGame>\n          <iGameNumber>100</iGameNumber>\n          <sLocalDateTime>string</sLocalDateTime>\n          <sUTCDateTime>string</sUTCDateTime>\n          <sTeam1>string</sTeam1>\n          <sTeam2>string</sTeam2>\n        </tNextGame>\n      </NextGamesResult>\n    </NextGamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "Players",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Players xmlns=\"https://footballpool.dataaccess.eu\">\n      <sName>string</sName>\n    </Players>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Get the top 10 players where name, fullname, firstname or lastname contains the value of sName"
+					},
+					"response": [
+						{
+							"name": "Players response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Players xmlns=\"https://footballpool.dataaccess.eu\">\n      <sName>string</sName>\n    </Players>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <PlayersResult>\n        <tPlayer>\n          <iId>100</iId>\n          <sName>string</sName>\n          <sFullName>string</sFullName>\n          <sFirstName>string</sFirstName>\n          <sLastName>string</sLastName>\n        </tPlayer>\n      </PlayersResult>\n    </PlayersResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "PlayerRoles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayerRoles xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the roles a player can have (defender etc)"
+					},
+					"response": [
+						{
+							"name": "PlayerRoles response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayerRoles xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayerRolesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <PlayerRolesResult>\n        <tPlayerRole>\n          <sCode>string</sCode>\n          <sDescription>string</sDescription>\n        </tPlayerRole>\n      </PlayerRolesResult>\n    </PlayerRolesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "PlayersWithCardsRanked",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithCardsRanked xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the names of all players that have a yellow or a red card. The number of yellow and red cards is returned."
+					},
+					"response": [
+						{
+							"name": "PlayersWithCardsRanked response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithCardsRanked xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithCardsRankedResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <PlayersWithCardsRankedResult>\n        <tTeamPlayerCardRankInfo>\n          <iRank>100</iRank>\n          <iID>100</iID>\n          <sName>string</sName>\n          <iYellowCards>100</iYellowCards>\n          <iRedCards>100</iRedCards>\n        </tTeamPlayerCardRankInfo>\n      </PlayersWithCardsRankedResult>\n    </PlayersWithCardsRankedResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "PlayersWithGoalsRanked",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithGoalsRanked xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the names of all players that have scored a goal."
+					},
+					"response": [
+						{
+							"name": "PlayersWithGoalsRanked response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithGoalsRanked xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <PlayersWithGoalsRankedResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <PlayersWithGoalsRankedResult>\n        <tTeamPlayerGoalsRankInfo>\n          <iRank>100</iRank>\n          <iID>100</iID>\n          <sName>string</sName>\n          <iGoals>100</iGoals>\n        </tTeamPlayerGoalsRankInfo>\n      </PlayersWithGoalsRankedResult>\n    </PlayersWithGoalsRankedResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "ResultsAllGames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ResultsAllGames xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGroupId>100</iGroupId>\n      <iLevel>100</iLevel>\n    </ResultsAllGames>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns game result of all games overall, in one group or at one level. When groupid &lt; 1 All games are processed (optionally filtered by level). A Group ID or level can be retrieved via GroupInfo."
+					},
+					"response": [
+						{
+							"name": "ResultsAllGames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ResultsAllGames xmlns=\"https://footballpool.dataaccess.eu\">\n      <iGroupId>100</iGroupId>\n      <iLevel>100</iLevel>\n    </ResultsAllGames>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ResultsAllGamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <ResultsAllGamesResult>\n        <tGameResult>\n          <iGameNumber>100</iGameNumber>\n          <sDescription>string</sDescription>\n          <dtLocalPlayDateTime>string</dtLocalPlayDateTime>\n          <dtUTCPlayDateTime>string</dtUTCPlayDateTime>\n          <sTeamName1>string</sTeamName1>\n          <sTeamName2>string</sTeamName2>\n          <iScoreTeam1>100</iScoreTeam1>\n          <iScoreTeam2>100</iScoreTeam2>\n          <iRedCards>100</iRedCards>\n          <iYellowCards>100</iYellowCards>\n          <sGroupCode>string</sGroupCode>\n          <bFinished>true</bFinished>\n          <iPenaltiesWonTeam1>100</iPenaltiesWonTeam1>\n          <iPenaltiesWonTeam2>100</iPenaltiesWonTeam2>\n        </tGameResult>\n      </ResultsAllGamesResult>\n    </ResultsAllGamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "StadiumGoogleMapsURL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumGoogleMapsURL xmlns=\"https://footballpool.dataaccess.eu\">\n      <sStadiumName>string</sStadiumName>\n    </StadiumGoogleMapsURL>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns a URL that can be used to show a small map of the stadium. For the name of the stadium call the funciton StadiumNames"
+					},
+					"response": [
+						{
+							"name": "StadiumGoogleMapsURL response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumGoogleMapsURL xmlns=\"https://footballpool.dataaccess.eu\">\n      <sStadiumName>string</sStadiumName>\n    </StadiumGoogleMapsURL>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumGoogleMapsURLResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <StadiumGoogleMapsURLResult>string</StadiumGoogleMapsURLResult>\n    </StadiumGoogleMapsURLResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "StadiumInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumInfo xmlns=\"https://footballpool.dataaccess.eu\">\n      <sStadiumName>string</sStadiumName>\n    </StadiumInfo>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns the information stored about a particular stadium. For that pass the exact name of the stadium. For the name of the stadium call the funciton StadiumNames"
+					},
+					"response": [
+						{
+							"name": "StadiumInfo response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumInfo xmlns=\"https://footballpool.dataaccess.eu\">\n      <sStadiumName>string</sStadiumName>\n    </StadiumInfo>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumInfoResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <StadiumInfoResult>\n        <sName>string</sName>\n        <iSeatsCapacity>100</iSeatsCapacity>\n        <sCityName>string</sCityName>\n        <sWikipediaURL>string</sWikipediaURL>\n        <sGoogleMapsURL>string</sGoogleMapsURL>\n      </StadiumInfoResult>\n    </StadiumInfoResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "StadiumNames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array of stadium names where the games are played"
+					},
+					"response": [
+						{
+							"name": "StadiumNames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <StadiumNamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <StadiumNamesResult/>\n    </StadiumNamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "TeamIDsByGroup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamIDsByGroup xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </TeamIDsByGroup>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns a list of team IDs based on passed GroupCode (e.g A or H). For the group code call the function GroupInfo"
+					},
+					"response": [
+						{
+							"name": "TeamIDsByGroup response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamIDsByGroup xmlns=\"https://footballpool.dataaccess.eu\">\n      <sGroupCode>string</sGroupCode>\n    </TeamIDsByGroup>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamIDsByGroupResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <TeamIDsByGroupResult/>\n    </TeamIDsByGroupResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "TeamPlayers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamPlayers xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n      <bSelected>true</bSelected>\n    </TeamPlayers>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Get the players of a team. This is the current squad. For the team name call the function TeamNames. Pass a 1 for selected players only or 0 for all registered players that belong to the team (now and in the past)"
+					},
+					"response": [
+						{
+							"name": "TeamPlayers response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamPlayers xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n      <bSelected>true</bSelected>\n    </TeamPlayers>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamPlayersResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <TeamPlayersResult>\n        <tPlayer>\n          <iId>100</iId>\n          <sName>string</sName>\n          <sFullName>string</sFullName>\n          <sFirstName>string</sFirstName>\n          <sLastName>string</sLastName>\n        </tPlayer>\n      </TeamPlayersResult>\n    </TeamPlayersResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "TeamNames",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with team names. The names can be used in functions that require or offer an option to pass a teamname"
+					},
+					"response": [
+						{
+							"name": "TeamNames response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamNames xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamNamesResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <TeamNamesResult/>\n    </TeamNamesResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "Teams",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Teams xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n    </Teams>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Get the top 10 teams starting with or containing the value of sTeamName. For the team name call the function TeamNames"
+					},
+					"response": [
+						{
+							"name": "Teams response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Teams xmlns=\"https://footballpool.dataaccess.eu\">\n      <sTeamName>string</sTeamName>\n    </Teams>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TeamsResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <TeamsResult>\n        <tTeam>\n          <iId>100</iId>\n          <sName>string</sName>\n        </tTeam>\n      </TeamsResult>\n    </TeamsResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				},
+				{
+					"name": "TopScorersList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TopScorersList xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{InfoSoapBaseUrl}}/info.wso",
+							"host": [
+								"{{InfoSoapBaseUrl}}"
+							],
+							"path": [
+								"info.wso"
+							]
+						},
+						"description": "Returns an array with the 5 best performing players."
+					},
+					"response": [
+						{
+							"name": "TopScorersList response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TopScorersList xmlns=\"https://footballpool.dataaccess.eu\"/>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ws.footballpool.dataaccess.eu/info.wso",
+									"protocol": "https",
+									"host": [
+										"ws",
+										"footballpool",
+										"dataaccess",
+										"eu"
+									],
+									"path": [
+										"info.wso"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <TopScorersListResponse xmlns=\"https://footballpool.dataaccess.eu\">\n      <TopScorersListResult>\n        <tTopScorerTop5>\n          <iRank>100</iRank>\n          <iGoals>100</iGoals>\n          <sName>string</sName>\n        </tTopScorerTop5>\n      </TopScorersListResult>\n    </TopScorersListResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				}
+			],
+			"description": "DataFlex Web Service for public information from the DataFlex Football Pool"
+		}
+	],
+	"variable": [
+		{
+			"key": "InfoSoapBaseUrl",
+			"value": "https://ws.footballpool.dataaccess.eu",
+			"type": "any"
+		},
+		{
+			"key": "InfoSoap12BaseUrl",
+			"value": "https://ws.footballpool.dataaccess.eu",
+			"type": "any"
+		}
+	]
+}
